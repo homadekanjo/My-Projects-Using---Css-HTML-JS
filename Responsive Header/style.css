@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+@import url('http://fonts.googleapis.com/earlyaccess/droidarabickufi.css');
+*{
+    /* font-family:'Droid Arabic Kufi', serif;*/
+     padding: 0;
+     margin: 0;
+     font-family:'Poppins' , sans-serif ,'Droid Arabic Kufi', serif;
+     box-sizing: border-box;
+     text-decoration: none;
+     transition: .4s cubic-bezier(0.165, 0.84, 0.44, 1); 
+     scroll-behavior: smooth;
+}
+:root{
+      --textColor:#fff;
+      --mainBg : #000;
+}
+body{
+      overflow-x: hidden;
+      overflow-y: scroll;
+}
+.page__header{
+      height: 70px;
+      width: 100%;
+      background: var(--mainBg);
+      color: var(--textColor);
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      position: relative;
+}
+h2{
+      font-size: calc(1rem + 20px);
+}
+.navBar{
+      position: relative;
+      transition: none;
+}
+.page__header .navBar a{
+      color: var(--textColor);
+      margin-inline: 9px;
+      padding: 5px 7px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 1.2rem;
+      letter-spacing:1px ;
+      text-transform: uppercase;
+}
+.page__header .navBar a:hover{
+      color: var(--mainBg);
+      background: var(--textColor);
+}
+.logBtns{
+      padding: 2px;
+}
+.page__header .logBtns button{
+      padding: 6px ;
+      border-radius: 20px;
+      outline: none;
+      cursor: pointer;
+      border: 2px solid var(--textColor);
+      letter-spacing: 1px;
+      background: transparent;
+      color: var(--textColor);
+      margin-inline: 2px;
+      font-size: .99rem;
+      user-select: none;
+}
+.logBtns button:hover{
+      background: var(--textColor);
+      color: var(--mainBg);
+}
+.menu__bar{
+      border-radius: 20px;
+      padding: 7px 6px;
+      cursor: pointer;
+      display: none;
+}
+.menu__bar i{
+      font-size: 1.9rem;
+      height: 100%;
+      width: 100%;
+}
+.menu__bar:hover{
+      scale: .95;
+      background: var(--textColor);
+      color: var(--mainBg);
+}
+@media screen and (width <= 720px) {
+      .menu__bar{
+            display: block;
+      }
+      .logBtns{
+            position: absolute;
+            right: 5px;
+            top: 80px;
+            display: none;
+      }
+      .navBar{
+            top:68px;
+            position: absolute;
+            right: 0;
+            background: var(--mainBg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 0;
+            width: 0;
+            transition: .2s cubic-bezier(0.47, 0, 0.745, 0.715);
+            border-radius: 4px;
+            overflow: hidden;
+      }
+      .navBar a{
+            width: 100%;
+            display: block;
+            margin-block: 5px;
+            border-radius: 1px;
+            text-align: center;
+      }
+      .page__header{
+            justify-content: space-between;
+            padding-inline: 1rem;
+            gap: 10px;
+      }
+      .nav__shown{
+            height: 500px;
+            width: 100%;
+      }
+      .btns__shown{
+            display: block;
+      }           
+}

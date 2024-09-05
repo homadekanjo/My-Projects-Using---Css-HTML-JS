@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+@import url('http://fonts.googleapis.com/earlyaccess/droidarabickufi.css');
+* , ::before , ::after{
+    /* font-family:'Droid Arabic Kufi', serif;*/
+     padding: 0;
+     margin: 0;
+     font-family:'Poppins' , sans-serif ,'Droid Arabic Kufi', serif;
+     box-sizing: border-box;
+     scroll-behavior: smooth;
+}
+:root{
+    --txtColor: #fff;
+    --fontColor : #000;
+}
+body{
+    background: url('bg-main.png') no-repeat;
+    background-size: cover;
+     height: 100vh;
+    /* background: #000; */
+}
+.header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 15px;
+    background: #ffffff1f;
+    height: 4rem;
+    backdrop-filter: blur(10px);
+    background: transparent;
+    position: fixed;
+    z-index: 100;
+}
+.navbar{
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header .logo{
+    font-size: 1.5rem;
+    color: var(--txtColor);
+}
+a{
+    color: #fff;
+}
+ .navbar .item{
+    text-decoration: none;
+    margin-inline: .6rem;
+    font-size: 1.2rem;
+    padding: 4px 6px;
+    border-radius: 19px;
+}
+.navbar .item:hover{
+    background: #fff;
+    color: #000;
+}
+ .active{
+    background: #fff;
+    color: #000;
+    padding: 4px 6px;
+}
+.btns{
+    margin-inline: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.logBtns{
+    font-size: 1.3rem;
+    border-radius: 20px;
+    padding: 3px 2px ;
+    text-decoration: none;
+    position: relative;
+    border: none;
+    cursor: pointer;
+}
+.logBtns:nth-child(2){
+    background: transparent;
+    color: var(--txtColor);
+    border: 1px solid green;
+}
+.logBtns:first-child:hover{
+    background: #000;
+    color: #fff;
+    outline: 1px solid #fff;
+}
+.logBtns:nth-child(2):hover{
+    color: #000;
+    background: #fff;
+}
+.bars{
+    height: 100%;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    flex-direction: column;
+    cursor: pointer;
+    display: none;
+    
+}
+.bar{
+    height: 3px;
+    width: 100%;
+    background: #fff;
+
+}
+.bars:hover .bar{
+    background: green;
+    
+}
+@media screen and ( width <= 695px){
+    .bars{
+        display: flex;
+    }
+    .navbar{
+        visibility: hidden;
+        position: absolute;
+        flex-direction: column;
+        background : #000000b0;
+        right: 0;
+        top: 90%;
+        padding: 13px 10px;
+        width: 0;
+        height: 0;
+        gap: 20px;
+        z-index: -1;
+        transition: .2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    }
+    .logBtns{
+        display: none;
+    }
+    .navbar > .item{
+        border: 1px solid green;
+        border-radius: 4px;
+        letter-spacing: 1px;
+    }
+    .logContainer  form{
+        width:250px ;
+    }
+}
+
+.navShown{
+    width: 100%;
+    visibility: visible;
+    height: 90vh;
+}
+section{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.logContainer {
+    translate: 0% 0%;
+    height: 350px;
+    width: 100%;
+    opacity: 0;
+    transition: .3s;
+    user-select: none;
+    pointer-events: none;
+}
+.visibileField{
+    opacity: 1;
+    translate: 0 50% ;
+    pointer-events: all;
+}
+.logContainer form{
+    background :transparent;
+    backdrop-filter: blur(3px);
+    height: 100%;
+    width: 400px;
+    border-radius: 12px;
+    padding: 4px 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid #fff;
+    box-shadow: 0 0 10px rgb(230, 208, 85);
+}
+.logContainer form h2{
+    font-size: 3rem;
+    letter-spacing: 1px;
+    color: #fff;
+}
+.username , .password , .sign_up_field{
+    height: 40px;
+    position: relative;
+    border-bottom: 2px solid #fff;
+    border-radius: 2px;
+    width: 60%;
+    margin-block: 4px;
+}
+.username svg , .password svg , .sign_up_field svg , .sign_up_field svg{
+    position: absolute;
+    right: 0;
+    top: 6%;
+    user-select: none;
+    fill: #fff;
+    scale: 1.3;
+}
+.username label , .password label , .sign_up_field label{
+    position: absolute;
+    top: 7%;
+    left: 0;
+    color: #fff;
+    user-select: none;
+    pointer-events: none;
+    transition: .2s linear;
+    letter-spacing: 1px;
+}
+#email , #password , .sign_up_field input{
+    height: 100%;
+    width: 100%;
+    padding: 3px 5px;
+    outline: none;
+    background: transparent;
+    border: none;
+    color: #fff;
+}
+ input:focus ~ label ,input:valid ~ label{
+    top: -45%;
+}
+.forgot{
+    
+    text-align: start;
+    width: 80%;
+}
+.forgot a {
+    color: rgb(4, 4, 236);
+    text-decoration: none;
+    font-size: .8rem;
+}
+.forgot a:hover{
+    text-decoration: underline;
+}
+.log__in , #registerBtn{
+    height: 50px;
+    width: 60%;
+    padding: 3px 2px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    background: linear-gradient(30deg , #d14504 , #045dd1 , #fff);
+    background-size: 200%;
+    transition: .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+.log__in:hover , #registerBtn:hover{
+    background-size: 100%;
+    box-shadow: 0 0 25px ;
+    color: #fff;
+}
+.line{
+    transition: .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: block;
+    position: absolute;
+    bottom: -6%;
+    left: -1%;
+    background: rgb(230, 208, 85);
+    height: 2px;
+    width: 0;
+    scale: .2;
+    transform-origin: center center;
+    box-shadow:  0 0 30px rgb(230, 208, 85) , 
+                0 0 80px rgb(230, 208, 85);
+}
+input:focus ~ .line , input:focus ~ .line {
+    scale: 1;
+    width: 101%;
+}
+.sign__up{
+    margin-block-end: 2px;
+}
+.sign__up p{
+    font-size: .9rem;
+    color: #fff;
+}
+.sign__up a {
+    color: red;
+    text-decoration: none;
+}
+.sign__up a:hover{
+    text-decoration: underline;
+}
+.regist{
+    translate: -10% -50%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s;
+    user-select: none;
+    pointer-events: none;
+}
+.regist h2{
+    color: #fff;
+    font-size: 1.7rem;
+}
+.regist form{
+    padding-block: 10px;
+    backdrop-filter: blur(3px);
+    width: 380px;
+    border-radius: 12px;
+    padding: 3px 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid #fff;
+    box-shadow: 0 0 10px rgb(230, 208, 85);
+    margin-block: 2px;
+    padding-block: .2rem;
+    
+}
+.privacy{
+    display: flex;
+    gap: 5px;
+    color: #fff;
+    margin-block: 4px;
+    #accept{
+        accent-color: rgb(105, 185, 13);
+    }
+}
+.privacy label{
+    font-size : .9rem;
+}
+.privacy a{
+    color: blue;
+    text-decoration: none;
+}
+.privacy a:hover{
+    text-decoration: underline;
+}
+.visibileField_reg{
+    opacity: 1;
+    pointer-events: all;
+    translate: 0 -50%;
+}

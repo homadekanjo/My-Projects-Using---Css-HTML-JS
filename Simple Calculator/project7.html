@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://kit.fontawesome.com/8b11e73cc2.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project7</title>
+    <link rel="stylesheet" href="project7_style.css">
+</head>
+
+<body>
+    
+    <div id="calculator">
+        <input type="button" id="calc__field">
+        <section id="buttons">
+        <input type="button"  id="button"  value="(" onclick="if ( !calcField.value.endsWith(this.value)){ calcField.value += this.value ;  }">
+        <input type="button"  id="button"  value=")" onclick="if (!calcField.value.endsWith(this.value)){ calcField.value += this.value ;  }">
+        <input type="button"  id="button"  value="%" onclick="if ( !calcField.value.endsWith(this.val0ue)){ calcField.value += this.value ;  }">
+        <input type="button"  id="button"  value="C" onclick="calcField.value =''">
+        <input type="button"  id="button"  value="7" onclick="calcField.value += this.value">
+        <input type="button"  id="button"  value="8" onclick="calcField.value += this.value">
+        <input type="button"  id="button"  value="9" onclick="calcField.value += this.value">
+        <input type="button"  id="button"  value="÷" onclick="if ( !calcField.value.endsWith(this.value)){ calcField.value += this.value ;  }">
+        <input type="button"  id="button"  value="4" onclick="calcField.value += this.value">
+        <input type="button"  id="button"  value="5" onclick="calcField.value += this.value">
+        <input type="button"  id="button"  value="6" onclick="calcField.value += this.value">
+        <input type="button"  id="button"  value="x" onclick="if ( !calcField.value.endsWith(this.value)){ calcField.value += this.value ;  }">
+        <input type="button"  id="button"  value="1" onclick="calcField.value += this.value">
+        <input type="button"  id="button"  value="2" onclick="calcField.value += this.value">
+        <input type="button"  id="button"  value="3" onclick="calcField.value += this.value">
+        <input type="button"  id="button"  value="-" onclick="calcField.value += this.value">
+        <input type="button"  id="button"  value="0" onclick="calcField.value += this.value">
+        <input type="button"  id="button"  value="." onclick="if ( !calcField.value.endsWith(this.value)){ calcField.value += this.value ;  }">
+        <input type="button"  id="button"  value="=" onclick="if ( !calcField.value.endsWith(this.value)){   calcField.value = solve(calcField.value) ;}">
+        <input type="button"  id="button"  value="+" onclick="if ( !calcField.value.endsWith(this.value)){ calcField.value += this.value ;  }">
+    </section>
+    </div>
+
+    <script src="message.js">
+  
+    </script>
+</body>
+
+
+
+</html>

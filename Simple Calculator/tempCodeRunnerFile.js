@@ -1,0 +1,1 @@
+ const calcField = document.getElementById('calc__field');

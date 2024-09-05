@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+@import url('http://fonts.googleapis.com/earlyaccess/droidarabickufi.css');
+*{
+    /* font-family:'Droid Arabic Kufi', serif;*/
+     padding: 0;
+     margin: 0;
+     font-family: 'Poppins' , sans-serif ,'Droid Arabic Kufi', serif;
+     box-sizing: border-box;
+     text-decoration: none;
+     transition: .4s cubic-bezier(0.165, 0.84, 0.44, 1); 
+      scroll-behavior: smooth;
+   }
+body{
+      height: 100vh;
+      color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background: #9822cf;
+      gap: 20px ;
+   }
+   .input{
+      position: relative;
+   }
+.input #data{
+   height: 40px;
+   width: 189px;
+   padding: 4px 6px;
+   background: #2b2a2a;
+   border: none;
+   outline: none;
+   color: #fff;
+   caret-color: #fff;
+   border-radius: 5px;
+}   
+#data:focus{
+   outline: 2px solid #fff;
+}
+.progress__bars{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   gap: 10px;
+   width: 400px;
+   
+} 
+.progress__bars .bar{
+   height: 40px;
+   width: 90%;
+   border-radius: 25px;
+   padding: 4px 5px;
+   color:#2b2a2a ;
+   cursor: pointer;
+   position: relative;
+   background: #4444d1;
+   box-shadow: 1px 1px 1px #000 ;
+   text-align: end;
+   color: #fff;
+}
+.bar:first-child #progress{
+   background: #19196d;
+}
+.bar:nth-child(2) #progress{
+   background: #12c764;
+}
+.bar:nth-child(3) #progress{
+   background: #ccc90b;
+}
+#inf{
+   display: block;
+   margin-block: 4px;
+   padding: 3px 4px;
+   color: #fff;
+   height: 25px;
+}
+.bar .title{
+   color: #fff;
+   position: absolute;
+   user-select: none;
+   bottom: 0;
+   font-size: .8;
+}
+.bar #progress{
+   display: block;
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 0;
+   opacity: 0;
+   background: #000;
+   border-radius: inherit;
+   color: #fff;
+   text-align: end;
+   padding: 6px 5px;
+   font-size: .8rem;
+}
+.bar:hover{
+   scale: 1.1;
+}
+#apply{
+   height: 40px;
+   padding: 5px 5px;
+   border-radius: 13px;
+   background: #cc720b;
+   color: #fff;
+   border: none;
+   cursor: pointer;
+}
+#apply:hover{
+   scale: .94;
+}
+.warning{
+   position: absolute;
+   translate: 0 -60px;
+   background: red;
+   height: 40px;
+   padding: 6px 5px;
+   color: #fff;
+   font-size: .8rem;
+   text-align: center;
+   border-radius: 13px;
+   opacity: 0;
+   user-select: none;
+}
+.warn__show{
+   opacity: 1;
+   translate: 0 -30px;
+}
+@media screen and (width <= 350px) {
+   .progress__bars{
+      width: 300px;
+   }
+}

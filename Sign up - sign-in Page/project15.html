@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/8b11e73cc2.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project 15</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+       <header class="header">
+        <div class="logo">Logo</div>
+        <nav class="navbar">
+            <a href="#home" class="active item">Home</a>
+            <a href="#conc" class="item">Contact</a>
+            <a href="#about" class="item">About us</a>
+            <a href="#prod" class="item">product</a>
+        </nav>
+        <div class="btns">
+        <button class="logBtns" id="sign_in_btn">sign in</button>
+        <button class="logBtns" id="sign_up_btn">sign up</button>
+        </div>
+        <div class="bars">
+            <div class="bar up"></div>
+            <div class="bar mid"></div>
+            <div class="bar dow"></div>
+    </div>
+       </header>
+       <section class="logContainer logs">
+        <form action="">
+            <h2>Login</h2>
+            <div class="username"><svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></svg><input type="text" id="email" required><label for="email">Email</label><span class="line"></span></div>
+            <div class="password"><svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M144 144v48H304V144c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192V144C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64H80z"/></svg><input type="password" id="password" required><label for="password">Password</label><span class="line"></span></div>
+            <div class="forgot"><a href="">forgot password?</a></div>
+            <button class="log__in">Log In</button>
+            <div class="sign__up"><p>don't have an account ? <a href="#" onclick="showSignUp()">sign up now</a></p></div>
+        </form>
+       </section>
+       <!-- signup register  -->
+       <section class="regist logs">
+        <form action="">
+        <h2>sign Up</h2>
+        <div class="firstname sign_up_field"><input type="text" id="firstname" required><span class="line"></span><label for="firstname">first name</label></div>
+        <div class="lastname sign_up_field"><input type="text" id="lastname" required><span class="line"></span><label for="lastname">last name</label></div>
+        <div class="email_s sign_up_field"><svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg><input type="text" id="email_s" required><span class="line"></span><label for="email_s">email</label></div>
+        <div class="confirm_email sign_up_field"><input type="text" id="confirm" required><span class="line"></span><label for="confirm_email">confirm email</label></div>
+        <div class="username_s sign_up_field"><svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></svg><input type="text" id="username" required><span class="line"></span><label for="username">username</label></div>
+        <div class="password_s sign_up_field"><svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M144 144v48H304V144c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192V144C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64H80z"/></svg><input type="password" id="password_s" required><span class="line"></span><label for="password_s">password</label></div>
+        <div class="confirm_pass sign_up_field"><input type="password" id="confirm_pass" required><span class="line"></span><label for="confirm_pass">confirm password</label></div>
+        <div class="privacy"><input type="checkbox" id="accept" required><label for="accept">I accept your <a href="#">terms and conditions</a></label></div>
+        <button id="registerBtn">register</button>
+        
+    </form>
+    </section>
+       
+    <script src="index.js"></script>
+</body>
+</html>

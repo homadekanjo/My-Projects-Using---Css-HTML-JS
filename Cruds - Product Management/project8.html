@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/8b11e73cc2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management</title>
+</head>
+<body>
+    <span class="scroll__up" id="scroll__up"><i class="fa-solid fa-arrow-up" id="arrow__up"></i></span>
+    <main class="crud">
+        <header class="crud__header">
+            <h2>CRUD</h2>
+            <p>Product Management System</p>
+        </header>
+        <section class="inputs">
+            <input placeholder="title" type="text"  id="title">
+            <div class="num__details">
+            <input onkeyup="getTotal()" placeholder="price" type="number"  id="price">
+            <input onkeyup="getTotal()" placeholder="taxes" type="number"  id="taxes">
+            <input onkeyup="getTotal()" placeholder="adds" type="number"  id="ads">
+            <input onkeyup="getTotal()" placeholder="discount" type="number"  id="discount">
+            <small id="total"></small></div>
+            <input placeholder="count" type="number"  id="count">
+            <input placeholder="category" type="text"  id="category">
+            <button id="submit">Creat</button>
+        </section>
+        <section class="outputs">
+            <div class="search__box"><input onkeyup="searchData(this.value)" placeholder="Search" type="text" id="search"></div>
+            <div class="search__custom">
+                <button onclick="searchMode(this.id)" id="search__title">Search By Title</button>
+                <button onclick="searchMode(this.id)" id="search__category">Search By Category</button>
+            </div>
+            <section id="delete__all"></section>
+            <table>
+                <tr>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>price</th>
+                    <th>taxes</th>
+                    <th>ads</th>
+                    <th>discount</th>
+                    <th>total</th>
+                    <th>category</th>
+                    <th>update</th>
+                    <th>delete</th>
+                </tr>
+                <tbody id="tbody">
+                    </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="config.js"></script>
+</body>
+</html>

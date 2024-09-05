@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+@import url('http://fonts.googleapis.com/earlyaccess/droidarabickufi.css');
+*{
+    /* font-family:'Droid Arabic Kufi', serif;*/
+     padding: 0;
+     margin: 0;
+     font-family: 'Poppins' , sans-serif ,'Droid Arabic Kufi', serif;
+     box-sizing: border-box;
+     text-decoration: none;
+     transition: .4s cubic-bezier(0.165, 0.84, 0.44, 1); 
+      scroll-behavior: smooth;
+   }
+ body{
+     background: #222;
+     color: #FFF;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     letter-spacing: 1px;
+     flex-direction: column;
+ }
+ ::placeholder{
+    color: #ffffffcc;
+ }
+ .crud{
+    width: 80%;
+    margin-block: 40px;
+ }
+ .crud__header{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 10px 0;
+ }
+ .inputs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: .5rem;
+ }
+ .inputs input , input{
+    height: 2.3rem;
+    outline: none;
+    border: none;
+    background: #111;
+    border-radius: calc( 1rem / 4 );
+    padding: 4px;
+    color: #fff;
+ }
+ :where(.inputs input:focus ,.outputs input:focus){
+    background: #000;
+    scale: 1.2;
+ }
+ .num__details{
+    width: 100%;
+ }
+ .inputs #title{ 
+    width:100%
+ }
+ .inputs .num__details input{
+    width: calc(100% / 5 );
+ }
+ small{
+    width: calc(100% / 5);
+    background: #e23f3f;
+    padding: .1rem .1rem;
+    border-radius: 3px;
+ }
+ small::before{
+    content: 'total: ';
+ }
+ #count , #category , #submit{
+    width: 100%;
+ }
+ button{
+    height: 30px;
+    border: none;
+    border-radius: 1rem ;
+    cursor: pointer;
+    background: #310044;
+    color: #fff;
+    text-transform: uppercase;
+ }
+ button:hover{
+    scale: .98;
+    background: #22052e;
+    letter-spacing: 2px;
+ }
+ .outputs{
+   width: 100%;
+ }
+ .search__box , .search__custom{
+   width: 100%;
+   display: flex;
+   margin-block: 6px;
+ }
+ .search__custom{
+   justify-content: space-evenly;
+   gap: .4rem;
+ }
+ .search__box input{
+   width: 100%;
+ }
+ .search__custom button{
+   width: 50%;
+ }
+table{
+   width: 100%;
+   text-align: center;
+}
+table th {
+   text-transform: uppercase;
+   font-size: ( 1rem - 10px);
+   margin-inline: 3px;
+}
+table button{
+   width: 80%;
+}
+#delete{
+   background: #630303;
+}
+#delete__all{
+   width: 100%;
+}
+#delete__all_btn{
+   width: 100%;
+   margin-block: 5px 5px;
+   background: #630303;
+}
+.scroll__up{
+   display: inline-flex;
+   position: fixed;
+   background: red;
+   align-items: center;
+   justify-content: center;
+   border-radius: 50%;
+   right: 1rem;
+   bottom: 1rem;
+   width: 0;
+   height: 0;
+   transition:  .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+.scroll__up i {
+   color: #fff;
+   font-size: 2rem;
+   display: none;
+   transition:  .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+.scroll__up:hover{
+   scale: 1.1;
+   cursor: pointer;
+}
+@media screen and (max-width : 450px)  {
+   .scroll__up{
+      left: 1rem;
+   }
+   
+}
+#search{
+   caret-color: red;
+}

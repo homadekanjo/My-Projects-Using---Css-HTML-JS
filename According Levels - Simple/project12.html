@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/8b11e73cc2.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Bars</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="input"> <div class="warning"></div> <span id="inf"></span><input type="number" id="data" min="0" max="100" placeholder="input a number" autofocus> <button id="apply" onclick="applyData()">Apply</button></section>
+    <section class="progress__bars">
+        <div class="bar" title="Java" id="bar"><span id="progress"></span><h3 class="title">Java</h3></div>
+        <div class="bar" title="Python" id="bar"><span id="progress"></span><h3 class="title">Python</h3></div>
+        <div class="bar" title="JavaScript" id="bar"><span id="progress"></span><h3 class="title">JavaScript</h3></div>
+        <div class="bar" title="C++" id="bar"><span id="progress"></span><h3 class="title">C++</h3></div>
+    </section>
+
+    <script src="index.js"></script>
+</body>
+</html>
